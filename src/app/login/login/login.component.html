@@ -1,0 +1,28 @@
+<!-- <p>login works!</p> -->
+
+<div class="card">
+    <div class="card-body">
+<div class="form-data form-group">
+    <input class="form-control" type="text" (change)="this.global.inputchange($event)" [(ngModel)]="userName" 
+     name="user" required #user_name="ngModel">
+     <label class="form-label">
+         <span>*</span>
+     </label>
+     <small *ngIf="user_name.touched && user_name.invalid">Required </small>
+</div>
+
+<div class="form-data form-group">
+    <input class="form-control" type="password" (change)="this.global.inputchange($event)" [(ngModel)]="password" 
+     name="pwd" required #pass_word="ngModel">
+     <label class="form-label">
+         <span>*</span>
+     </label>
+     <small *ngIf="pass_word.touched && pass_word.invalid">Required </small>
+</div>
+
+<div>
+    <button class="submit()">Submit</button>
+</div>
+        
+    </div>
+</div>

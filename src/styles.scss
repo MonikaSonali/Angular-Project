@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+
+.btn{
+    color : white !important;
+
+}
+.btn-primary{
+  background-color: #17a2b8 !important
+}
+.label-required{
+    color: red;
+}
+input{
+    &:focus{
+        border-color: unset !important;
+        box-shadow: none !important;
+    }
+} 
+
+// .form-control:focus{
+//         border-color: unset !important;
+//     box-shadow: none !important;
+
+// }
+.form-group {
+   
+    &.form-data {
+      position: relative;
+      z-index: 1;
+      
+      &.form-active .form-control + .form-label,
+      &.form-active .form-control + .form-select {
+        color: #bbbbbb;
+        top: 0px;
+        z-index: 1;
+      }
+   .form {
+        &-control {
+          background: transparent; // &:valid + .form-label,
+  
+          &:focus + .form-label,
+          &:focus + .form-select {
+            color: black;
+            top: 0px;
+            z-index: 1;
+          }
+        }
+  
+        &-text {
+          position: absolute;
+          right: 0;
+        }
+  
+        // &-control:not(:valid) + .form-label,
+        &-label {
+          color: #bbbbbb;
+          background: white;
+          position: absolute;
+          top: 50%;
+          padding: 0;
+          transform: translateY(-50%);
+          left: 10px;
+          transition: all 0.2s;
+          z-index: -1;
+        }
+  
+        &-select {
+          color: #bbbbbb;
+          background: white;
+          position: absolute;
+          top: 50%;
+          padding: 0 5px;
+          transform: translateY(-50%);
+          left: 15px;
+          transition: all 0.2s;
+          z-index: -1;
+        }
+        &-multiselect{
+          color: #bbbbbb;
+          background: white;
+          position: absolute;
+          bottom: 45%;
+          padding: 0 5px;
+          transform: translateY(-50%);
+          left: 15px;
+          transition: all 0.2s;
+          // z-index: -1;
+        }
+      }
+    }
+  }
+  
+  .icon{
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+
