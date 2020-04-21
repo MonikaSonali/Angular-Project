@@ -10,7 +10,7 @@ const routes: Routes = [
    children:[
      {
        path:'landing',
-       loadChildren:'landing/landing.module#LandingModule'
+       loadChildren:()=>import('./landing/landing.module').then(x=>x.LandingModule)
      },
      {
        path:'',
@@ -26,7 +26,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class PagesRoutingModule { }
